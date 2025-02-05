@@ -1,19 +1,16 @@
-```
+``` js
 let port;
 let connectBtn;
 
 function setup() {
-    createCanvas(400, 400);
+        createCanvas(400, 400);
     background(220);
     port = createSerial();
     connectBtn = createButton('Connect to micro:bit');
-    connectBtn.position(80, 300);
+    connectBtn.position(135, 300);
     connectBtn.mousePressed(connectBtnClick);
-    let sendBtn = createButton('Send Love');
-    sendBtn.position(220, 300);
-    sendBtn.mousePressed(sendBtnClick);
     fill('white');
-    ellipse(width / 2, height / 2, 100, 100);
+    
     a=0;
     b=0;
     c=0;
@@ -28,9 +25,9 @@ function draw() {
             b = random(0,250);
             c = random(0,250);
         }
-       
+      fill(a,b,c)
+    square(100, 100, 200);
     }
-    rect();
 
 
     if (!port.opened()) {
@@ -48,5 +45,17 @@ function connectBtnClick() {
         port.close();
     }
 }
+```
 
+```
+from microbit import *
+
+uart.init(baudrate=115200)
+display.show(Image.BUTTERFLY)
+
+while True:
+    if button_a.is_pressed():
+        uart.write('A')
+        sleep(500)
+    
 ```
