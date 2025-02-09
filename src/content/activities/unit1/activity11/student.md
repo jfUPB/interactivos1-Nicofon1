@@ -64,3 +64,7 @@ while True:
         sleep(500)
     
 ```
+
+Se mapea gracias a `if button_a.is_pressed():
+        uart.write('A')
+        sleep(500)` y  `if(dataRx == 'A')`
