@@ -52,8 +52,6 @@ class Sem:
                     
             else:
                 self.pixelState = 9
-```
-g
             display.set_pixel(self.pixel3[0],self.pixel3[1],self.pixelState)
                  
 
@@ -62,3 +60,4 @@ pixel1 = Sem((0,0),0,(3000,700,2000))
 
 while True:
     pixel1.update()
+```
