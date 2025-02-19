@@ -45,49 +45,51 @@ while True:
 
             
     elif current_state == STATE_BOOM:
-        
-        music.pitch(pitch_value)
-        if pitch_value > 100:
-            pitch_value -= 4
-
-
-        if utime.ticks_diff(utime.ticks_ms(), start_time) > 2500:
-            display.show(Image.SKULL)
-            
-        else:
-            if utime.ticks_diff(utime.ticks_ms(), start_time) > 0:
-                display.show(Image('00000:'
-                                   '00000:'
-                                   '00900:'
-                                   '00000:'
-                                   '00000'))
-            if utime.ticks_diff(utime.ticks_ms(), start_time) > 500:
-                display.show(Image('00000:'
-                                   '00900:'
-                                   '09090:'
-                                   '00900:'
-                                   '00000'))
-            if utime.ticks_diff(utime.ticks_ms(), start_time) > 1000:
-                display.show(Image('00900:'
-                                   '09090:'
-                                   '90009:'
-                                   '09090:'
-                                   '00900'))
-            if utime.ticks_diff(utime.ticks_ms(), start_time) > 1500:
-                display.show(Image('09090:'
-                                   '90009:'
-                                   '00000:'
-                                   '90009:'
-                                   '09090'))
-            if utime.ticks_diff(utime.ticks_ms(), start_time) > 2000:
-                display.show(Image('90009:'
-                                   '00000:'
-                                   '00000:'
-                                   '00000:'
-                                   '90009'))
         if utime.ticks_diff(utime.ticks_ms(), start_time) > 3300:
-            current_state = STATE_CONFIG
-            
-            
+            if pin_logo.is_touched():
+                    current_state = STATE_CONFIG  
+            music.stop()
+        else:
+            music.pitch(pitch_value)
+            if pitch_value > 100:
+                pitch_value -= 4
+                
+                
+    
+    
+            if utime.ticks_diff(utime.ticks_ms(), start_time) > 2500:
+                display.show(Image.SKULL)
+                
+            else:
+                if utime.ticks_diff(utime.ticks_ms(), start_time) > 0:
+                    display.show(Image('00000:'
+                                       '00000:'
+                                       '00900:'
+                                       '00000:'
+                                       '00000'))
+                if utime.ticks_diff(utime.ticks_ms(), start_time) > 500:
+                    display.show(Image('00000:'
+                                       '00900:'
+                                       '09090:'
+                                       '00900:'
+                                       '00000'))
+                if utime.ticks_diff(utime.ticks_ms(), start_time) > 1000:
+                    display.show(Image('00900:'
+                                       '09090:'
+                                       '90009:'
+                                       '09090:'
+                                       '00900'))
+                if utime.ticks_diff(utime.ticks_ms(), start_time) > 1500:
+                    display.show(Image('09090:'
+                                       '90009:'
+                                       '00000:'
+                                       '90009:'
+                                       '09090'))
+                if utime.ticks_diff(utime.ticks_ms(), start_time) > 2000:
+                    display.show(Image('90009:'
+                                       '00000:'
+                                       '00000:'
+                                       '00000:'
+                                       '90009'))
        
 ```
