@@ -82,6 +82,8 @@ while True:
                 if utime.ticks_diff(utime.ticks_ms(), start_time) > 1500:
                     display.show(Image('09090:'
                                        '90009:'
+
+
                                        '00000:'
                                        '90009:'
                                        '09090'))
@@ -93,3 +95,5 @@ while True:
                                        '90009'))
        
 ```
+
+https://youtube.com/shorts/M95Oc_bqX-Q?si=ouURjl_jNwkzGXax
