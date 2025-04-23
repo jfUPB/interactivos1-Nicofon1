@@ -65,8 +65,10 @@ Con lo anterior en mente, ahora vas a modificar el código de p5.js para leer
 los datos en formato binario. Sin embargo, al igual que con el código del micro:bit, 
 te pediré que primero verifiquemos si los datos se están enviando correctamente.
 
+<details><summary>
  Cambia el código de p5.js para que se vea así:
-
+</summary>
+    
 ``` js
 let c;
 let lineModuleSize = 0;
@@ -280,7 +282,7 @@ function keyReleased() {
   if (key === "9") lineModuleIndex = 4;
 }
 ```
-
+</details>
 Casi todo el código es el mismo que en la unidad anterior, pero esta 
 vez nos vamos a concentrar solo en esta parte:
 
@@ -373,7 +375,7 @@ Bytes 1-6: Datos (dos enteros de 16 bits y dos bytes para estados)
 Byte 7: Checksum (suma de los 6 bytes de datos módulo 256)
 ```
 
-De nuevo, el código del micro:bit quedaría así:
+De nuevo, el código del micro:bit quedaría así:</summary>
 
 ``` py
 from microbit import *
@@ -397,7 +399,7 @@ while True:
     sleep(100)  # Envía datos a 10 Hz
 ```
 
-Ahora, el código de p5.js quedaría así:
+<details><summary> Ahora, el código de p5.js quedaría así:</summary>
 
 ``` js
 let serialBuffer = []; // Buffer para almacenar bytes recibidos
@@ -647,11 +649,14 @@ function keyReleased() {
 
 ```
 
+</details> 
+
 🧐🧪✍️ Analiza el código, observa los cambios. Ejecuta y luego observa 
 la consola. ¿Qué ves?
 
-La versión final de los programas de micro:bit y p5.js
-son las siguientes:
+
+<details><summary> La versión final de los programas de micro:bit y p5.js
+son las siguientes:</summary>
 
 ``` py
 from microbit import *
@@ -918,6 +923,8 @@ function keyReleased() {
   if (key === "9") lineModuleIndex = 4;
 }
 ```
+
+</details>
 
 🧐🧪✍️ ¿Qué cambios tienen los programas y ¿Qué puedes observar en la consola del 
 editor de p5.js?
