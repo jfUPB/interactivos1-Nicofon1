@@ -1,22 +1,40 @@
-1. Comunicación: Micro:bit y p5.js se comunican por cable USB (conexión serial). El micro:bit manda datos de aceleración (X, Y) y estado de botones (A, B) como texto. Ejemplo: "-100, 250, True, False\n".
++ ¿Qué ocurrió en la terminal cuando ejecutaste npm install? ¿Cuál crees que es su propósito?
+  + creo que intala todo el programa des servidor dentot de la carpeta de archivos de programa
+```
+added 121 packages, and audited 122 packages in 2s
 
-2. Protocolo: Es texto simple (ASCII). Los valores se separan con comas, y cada envío termina con un salto de línea (\n) para indicar el final del dato.
+16 packages are looking for funding
+  run `npm fund` for details
 
-3. Lectura y transformación en p5.js:
+5 vulnerabilities (3 low, 2 high)
 
-        if (port.availableBytes() > 0) {
-          let data = port.readUntil("\n");
-          if (data) {
-            data = data.trim();
-            let values = data.split(",");
-            if (values.length == 4) {
-              microBitX = int(values[0]) + windowWidth / 2;
-              microBitY = int(values[1]) + windowHeight / 2;
-              microBitAState = values[2].toLowerCase() === "true";
-              microBitBState = values[3].toLowerCase() === "true";
-              updateButtonStates(microBitAState, microBitBState);
-            }
-          }
-        }
-4. Eventos de botones:
-La función updateButtonStates() mira si el estado de un botón cambió desde la última vez. Si el botón A ahora está presionado (antes no lo estaba), se genera el evento "A pressed". Si el botón B ahora está suelto (antes estaba presionado), se genera "B released".
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.2.0 -> 11.3.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+npm notice Run npm install -g npm@11.3.0 to update!
+npm notice
+  ```
+
++ ¿Qué mensaje específico apareció en la terminal después de ejecutar npm start? ¿Qué indica este mensaje?
+  + que ha arrancado el servidor
+```
+> nodejs-test-1@1.0.0 start
+> node server.js
+```
++ Describe lo que ves inicialmente en page1 y page2 en tu navegador.
+  + inicialmente en el uno aparecian las dos ezferas condectadas y creoqen el 2 solo una pero desincronizada y a medida que movia una pagina se actualizaba la posicion de la otra
++ ¿Qué mensajes aparecieron en la terminal del servidor cuando abriste page1 y page2?
+```
+A user connected
+A user connected
+  ```
+
+
++ Describe qué sucede en ambas páginas del navegador cuando mueves una de las ventanas. ¿Cambia algo visualmente? ¿Qué mensajes aparecen (si los hay) en la consola del navegador (usualmente accesible con F12 -> Pestaña Consola) y en la terminal del servidor?
+  + se actualiza la posicion de la otra, y se ve su conexion
+  + ela page 1 `jLzaE4uyMSf7eHiMAAAL` y en la dos `GSYEcny0t8kbd4FcAAAJ` y  a medida que se mueve la otra actualiza esto `{x: 91, y: 114, width: 400, height: 944}`
+  
