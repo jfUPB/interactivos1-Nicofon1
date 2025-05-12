@@ -13,4 +13,9 @@ manager.js:108
 ```
 + Vuelve a iniciar el servidor y refresca la página. ¿Desaparecen los errores?
   + si
-+ 
++ ¿Qué pasó en page1 antes de que movieras page2?
+  + apuntaba a donde no era
++ ¿Tenía la información correcta sobre page2 desde el principio?
+  + no
++ ¿Por qué es útil enviar el estado inicial al conectarse?
+  + para evitar errores como esos y poder 
