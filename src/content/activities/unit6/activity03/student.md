@@ -21,3 +21,10 @@ page1:1 Refused to execute script from 'http://localhost:3000/page1.js' because 
 + ¿Por qué sí o por qué no?
   + `socket.emit('getdata', page1);` solo envía el mensaje al **cliente actual** (el que envió el 'win1update'), **no a los demás clientes**. Por eso **page2 no se actualiza**.  
   + Al quitar `broadcast`, se pierde la difusión a otros clientes conectados. Solo el emisor recibe su propio cambio, lo cual no es útil en este caso de sincronización entre páginas. 
++  ¿En qué puerto dice que está escuchando?
+  + 3001
++ Intenta abrir http://localhost:3000/page1. ¿Funciona?
+  + no
++ Intenta abrir http://localhost:3001/page1. ¿Funciona?
+  + si
+  
