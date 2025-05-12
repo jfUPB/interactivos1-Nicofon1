@@ -15,4 +15,9 @@ page1:1 Refused to execute script from 'http://localhost:3000/page1.js' because 
 + Mueve la ventana de page1 y 2. Observa la terminal del servidor. ¿Qué evento se registra (win1update o win2update)? ¿Qué datos (Data:) ves?
   +  con la uno `Received win1update from ID: BcGbqjl0h1JyNYElAAAB Data: { x: 794, y: 337, width: 400, height: 936 }` con la dos `Received win1update from ID: BcGbqjl0h1JyNYElAAAB Data: { x: 794, y: 326, width: 400, height: 947 }`
 + ¿Se actualiza la visualización en page2? ¿Por qué sí o por qué no?
-  + el page 2 no La página page2 no recibe el mensaje porque socket.emit envía el mensaje únicamente al mismo cliente que lo originó (el mismo socket).  
+  + el page 2 no La página page2 no recibe el mensaje porque socket.emit envía el mensaje únicamente al mismo cliente que lo originó (el mismo socket).
++ ¿Se actualiza la visualización en page2?
+  + no
++ ¿Por qué sí o por qué no?
+  + `socket.emit('getdata', page1);` solo envía el mensaje al **cliente actual** (el que envió el 'win1update'), **no a los demás clientes**. Por eso **page2 no se actualiza**.  
+  + Al quitar `broadcast`, se pierde la difusión a otros clientes conectados. Solo el emisor recibe su propio cambio, lo cual no es útil en este caso de sincronización entre páginas. 
