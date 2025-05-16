@@ -7,7 +7,7 @@
   + nop, todo bastante llevadero
 
 + ¿Tienes alguna sugerencia para mejorar la forma en que se presentan los conceptos o las actividades de esta unidad?
-  + 8 secciones para una actividad visualmente uno ya dice como uy ta larguito, a unq gracias al buen seccionamiento  se hizo bastante llevadero, pero si el numero 8 ya alcanza a rozar un tris lo escandalozo por asi decirlo, mientra q 7 o 6 es una zona mas segura
+  + 8 secciones para una actividad visualmente uno ya dice como uy ta larguito, a unq gracias al buen seccionamiento  se hizo bastante llevadero, pero si el numero 8 ya alcanza a rozar un tris lo escandalozo por asi decirlo, mientra q 6 es una zona segura a pesar de q se reparta lo q faltaba de las 2 en las 6
 
 + ¿El ritmo de la unidad fue adecuado para ti?
   + sip
