@@ -1,0 +1,1 @@
+ps aparte ed lo de colapsar los textos que sean copiar y pegar q lo he dicho en esta parte de unidades pasadas, creo q esta bastante bn, tal vez lo de dividir las tareas, pq antes se dividian muchas no tan largas pero ahora so pocas pero demasiado largas y termina atascando el sentimiento de avance, entonces depronto como un punto medio idk
